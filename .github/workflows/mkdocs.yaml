@@ -27,6 +27,7 @@ jobs:
     - name: Build
       run: |
         mkdocs build --config-file ./website/mkdocs.yml
+        touch website/docs/.nojekyll
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.5.1
