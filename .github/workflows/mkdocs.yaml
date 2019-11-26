@@ -2,12 +2,11 @@ name: github pages
 
 on:
   push:
-    branches:
-    - master
+    paths: website/**
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
 
@@ -32,6 +31,6 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.5.1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./website/docs
