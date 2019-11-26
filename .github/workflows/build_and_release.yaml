@@ -20,8 +20,8 @@ jobs:
         with:
           args: install r.project -y
       
-      #- name: Install dependencies
-        #run: "C:\\Program Files\\R\\R-3.6.1\\bin\\Rscript.exe" -e "1+1" 
+      - name: Install dependencies
+        run: 'C:\Program Files\R\R-3.6.1\bin\Rscript.exe' -e "1+1" 
         #run: "C:\\Program Files\\R\\R-3.6.1\\bin\\Rscript.exe" -e "install.packages(c('remotes', 'rcmdcheck', 'devtools', 'Rcpp'))" 
         #run: "C:\\Program Files\\R\\R-3.6.1\\bin\\Rscript.exe" -e "remotes::install_deps(dependencies = TRUE)"
       
